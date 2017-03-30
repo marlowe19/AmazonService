@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  aws.api:
+    image: aws.api
+    build:
+      context: ./AWS.API
+      dockerfile: Dockerfile
+
+  aws.instances:
+    image: aws.instances
+    build:
+      context: ./../AWS.Instances
+      dockerfile: Dockerfile
+
+  aws.web:
+    image: aws.web
+    build:
+      context: ./src/Web Apps/AWS.WEB/AWS.WEB
+      dockerfile: Dockerfile
+
+  amazon.api:
+    image: amazon.api
+    build:
+      context: ./src/Services/Amazon.API/Amazon.API
+      dockerfile: Dockerfile
