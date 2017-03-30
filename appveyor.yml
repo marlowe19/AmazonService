@@ -1,0 +1,14 @@
+version: 1.0.{build}  
+image: Visual Studio 2017
+configuration: Release  
+build:  
+  project: AWS.API.sln
+  verbosity: minimal
+test: off  
+artifacts:  
+- path: x64/Release/myfavoriteproject.exe
+  name: Release
+deploy:  
+- provider: GitHub
+  auth_token:
+    secure: xxxxx
