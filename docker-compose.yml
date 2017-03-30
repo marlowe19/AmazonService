@@ -1,12 +1,6 @@
 version: '2'
 
 services:
-  aws.api:
-    image: aws.api
-    build:
-      context: ./AWS.API
-      dockerfile: Dockerfile
-
   aws.web:
     image: aws.web
     build:
