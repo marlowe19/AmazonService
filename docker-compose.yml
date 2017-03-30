@@ -7,12 +7,6 @@ services:
       context: ./AWS.API
       dockerfile: Dockerfile
 
-  aws.instances:
-    image: aws.instances
-    build:
-      context: ./../AWS.Instances
-      dockerfile: Dockerfile
-
   aws.web:
     image: aws.web
     build:
