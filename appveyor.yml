@@ -1,4 +1,5 @@
 version: '1.0.{build}'
+image: Visual Studio 2017
 configuration:
 - Release
 platform:
@@ -15,8 +16,8 @@ before_build:
 - appveyor-retry dotnet restore src\ks.model -v Minimal -r %PLATFORM%
 - appveyor-retry dotnet restore src\ks -v Minimal -r %PLATFORM%
 build_script:
-- dotnet build "src\ks.model" -c %CONFIGURATION% -r %PLATFORM%  --no-dependencies --version-suffix %LABEL%
-- dotnet build "src\ks" -c %CONFIGURATION% -r %PLATFORM% --version-suffix %LABEL%
+- dotnet build "src\Services\Amazon.API\Amazon.API" -c %CONFIGURATION% -r %PLATFORM%  --no-dependencies --version-suffix %LABEL%
+- dotnet build "src\Web Apps\AWS.WEB\AWS.WEB" -c %CONFIGURATION% -r %PLATFORM% --version-suffix %LABEL%
 after_build:
 - dotnet publish "src\ks" -c %CONFIGURATION% -r %PLATFORM% --version-suffix %LABEL% -o %APPVEYOR_BUILD_FOLDER%\artifacts\%PLATFORM%
 - 7z a zip\ks_%PLATFORM%.zip %APPVEYOR_BUILD_FOLDER%\artifacts\%PLATFORM%\*.*
