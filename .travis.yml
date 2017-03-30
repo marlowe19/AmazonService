@@ -23,7 +23,7 @@ addons:
 
 branches:
   only:
-    - master
+    - Master
  
 
 before_install:  
