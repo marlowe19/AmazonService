@@ -3,9 +3,8 @@ image: Visual Studio 2017
 configuration: Release
 install:
 - choco install docker-compose
-init:
-- ps: .\switch.ps1
 before_build:
+  - ps: .\switch.ps1
   -  dotnet --info
   -  dotnet restore AWS.API.sln
 build:  
