@@ -1,6 +1,9 @@
 version: 1.0.{build}  
 image: Visual Studio 2017
 configuration: Release
+install:
+- choco install docker-compose
+
 before_build:
   -  dotnet --info
   -  dotnet restore AWS.API.sln
