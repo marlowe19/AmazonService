@@ -4,8 +4,7 @@ configuration: Release
 install:
 - choco install docker-compose
 build_script:
-- ps: & 'C:\Program Files\Docker\Docker\DockerCli.exe' -SwitchDaemon
-
+- ps: .\switch.ps1
 before_build:
   -  dotnet --info
   -  dotnet restore AWS.API.sln
