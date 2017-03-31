@@ -2,7 +2,8 @@ version: 1.0.{build}
 image: Visual Studio 2017
 configuration: Release
 before_build:
-  donet restore
+  -  dotnet --info
+  - donet restore
 build:  
   project: AWS.API.sln
   verbosity: minimal
