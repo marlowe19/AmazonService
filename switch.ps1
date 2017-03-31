@@ -1,2 +1,2 @@
-Test-Path "C:\Program Files\Docker"
-# & 'C:\Program Files\Docker\Docker\DockerCli.exe' -SwitchDaemon
+Test-Path "C:\Program Files\Docker\dockercli.exe"
+ & 'C:\Program Files\Docker\DockerCli.exe' -SwitchDaemon
