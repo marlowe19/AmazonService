@@ -6,7 +6,7 @@ before_build:
   -  dotnet restore AWS.API.sln
 build_script:  
   - dotnet build "src\Services\Amazon.API\Amazon.API"
-  - dontnet build "src\Web Apps\AWS.WEB\AWS.WEB"
+  - dotnet build "src\Web Apps\AWS.WEB\AWS.WEB"
 test: off  
 artifacts:  
 - path: x64/Release/myfavoriteproject.exe
