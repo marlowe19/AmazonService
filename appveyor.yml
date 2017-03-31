@@ -1,15 +1,11 @@
 version: 1.0.{build}  
 image: Visual Studio 2017
 configuration: Release
-install:
-- choco install -y docker
-- choco install docker-compose
+
 before_build:
-  - ps Test-Path "C:\Program Files\Docker\Docker"
-  - ps: .\switch.ps1
   -  dotnet restore AWS.API.sln
 build:  
-  project: AWS.API.sln
+  project: src\Services\Amazon.API\Amazon.API
   verbosity: minimal
 test: off  
 artifacts:  
