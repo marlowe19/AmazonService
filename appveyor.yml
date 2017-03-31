@@ -3,7 +3,7 @@ image: Visual Studio 2017
 configuration: Release
 install:
 - choco install docker-compose
-build_script:
+init:
 - ps: .\switch.ps1
 before_build:
   -  dotnet --info
