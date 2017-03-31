@@ -3,7 +3,7 @@ image: Visual Studio 2017
 configuration: Release
 before_build:
   -  dotnet --info
-  - dotnet restore
+  -  dotnet restore AWS.API.sln
 build:  
   project: AWS.API.sln
   verbosity: minimal
@@ -11,7 +11,4 @@ test: off
 artifacts:  
 - path: x64/Release/myfavoriteproject.exe
   name: Release
-deploy:  
-- provider: GitHub
-  auth_token:
-    secure: xxxxx
+
