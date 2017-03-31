@@ -5,7 +5,7 @@ configuration: Release
 before_build:
   -  dotnet restore AWS.API.sln
 build:  
-  project: src\Services\Amazon.API\Amazon.API src\Web Apps\AWS.WEB\AWS.WEB
+  project: src\Services\Amazon.API\Amazon.API, src\Web Apps\AWS.WEB\AWS.WEB
   verbosity: minimal
 test: off  
 artifacts:  
