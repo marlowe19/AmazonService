@@ -4,10 +4,8 @@ configuration: Release
 install:
 - choco install docker-compose
 before_build:
-  - docker info
   - ps Test-Path "C:\Program Files\Docker\Docker"
   - ps: .\switch.ps1
-  -  dotnet --info
   -  dotnet restore AWS.API.sln
 build:  
   project: AWS.API.sln
