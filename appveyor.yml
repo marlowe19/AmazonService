@@ -2,6 +2,7 @@ version: 1.0.{build}
 image: Visual Studio 2017
 configuration: Release
 install:
+-choco install -y docker
 - choco install docker-compose
 before_build:
   - ps Test-Path "C:\Program Files\Docker\Docker"
