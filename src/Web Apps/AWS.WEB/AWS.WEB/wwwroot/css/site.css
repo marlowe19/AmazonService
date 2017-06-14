@@ -89,3 +89,57 @@ input {
     max-width: 50%;
     height:300px;
 }
+
+.block {
+    height: 100px;
+    width: 100%;
+    margin-bottom: 20px;
+    postion: relative
+}
+
+.border-bar {
+    background-color: red;
+    position: absolute;
+    height: 100px;
+    width: 8px;
+    left 0;
+}
+
+.control-bar {
+    position: absolute;
+    right: 0;
+}
+
+.list-container {
+}
+
+.content {
+    padding-top: 8px;
+    padding-left: 30px;
+    position: absolute;
+}
+
+.name {
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #444;
+    font-size: 18px;
+}
+
+.details {
+    font-size: 0.75rem;
+    color: #aaa;
+}
+
+.subtitle {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+* {
+    font-family: "Segoe UI Semibold","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+}
+
+div.border-bar.isOnline {
+    background-color: green;
+}

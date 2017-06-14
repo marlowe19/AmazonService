@@ -259,3 +259,5 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+src/Web Apps/AWS.WEB/AWS.WEB/out/refs/Microsoft.Win32.Registry.dll
+src/Web Apps/AWS.WEB/AWS.WEB/out/
