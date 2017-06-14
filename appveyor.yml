@@ -1,17 +1,12 @@
 version: 1.0.{build}  
 image: Visual Studio 2017
 configuration: Release
-install:
-- choco install docker-compose
-build_script:
-- ps: & 'C:\Program Files\Docker\Docker\DockerCli.exe' -SwitchDaemon
 
 before_build:
-  -  dotnet --info
   -  dotnet restore AWS.API.sln
-build:  
-  project: AWS.API.sln
-  verbosity: minimal
+build_script:  
+  - dotnet build "AWS.API.sln"
+  - dotnet build "src\Web Apps\AWS.WEB\AWS.WEB"
 test: off  
 artifacts:  
 - path: x64/Release/myfavoriteproject.exe
